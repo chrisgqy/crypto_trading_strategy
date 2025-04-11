@@ -1,66 +1,33 @@
-# Crypto Trading Backtest: SMA Crossover Strategy
+# Crypto and Stock Trading Strategy: Moving Average Crossing and Donchian Channel
 
-## Overview 📈
-This repository provides a robust backtesting framework for a simple but effective **Simple Moving Average (SMA) Crossover Trading Strategy** on cryptocurrency markets. The strategy dynamically allocates capital based on trend signals and includes transaction cost considerations for a realistic performance evaluation.
+Welcome to the **Crypto and Stock Trading Strategy** project, where cutting-edge quantitative finance meets the dynamic world of cryptocurrency and stock trading. This repository showcases a sophisticated trading strategy that leverages the power of Moving Average Crossovers and Donchian Channels to identify profitable trading opportunities in volatile markets.
 
-## Features 🔥
-- **Fetch Historical Data** 📡: Retrieves OHLCV data from the **Coinbase API**.
-- **Technical Indicators** 📊: Implements **Simple Moving Averages (SMA)**, Weighted Moving Averages (WMA), and **Highpass/Lowpass filters**.
-- **Signal Generation** 🚦: Identifies **Golden Cross (Buy)** and **Death Cross (Sell)** signals.
-- **Dynamic Backtesting** 🏦: Simulates trading with dynamic capital allocation and transaction costs.
-- **Performance Visualization** 📉: Generates **candlestick charts**, SMA overlays, and **equity performance plots**.
+## 🚀 Project Overview
 
-## How It Works ⚙️
-### 1️⃣ Fetch Historical Data
-```python
-fetch_historical_data(base_curr="BTC", quote_curr="USDT", start_time="2021-01-01", end_time="2025-03-15")
-```
-- Retrieves daily OHLCV (Open, High, Low, Close, Volume) data from **Coinbase**.
-- Data is stored in a Pandas DataFrame for easy analysis.
+In the ever-evolving landscape of financial markets, having a robust trading strategy is crucial for success. This project combines traditional technical analysis with advanced quantitative techniques to create a comprehensive trading system. Whether you're a seasoned trader or a curious enthusiast, this project offers valuable insights into the mechanics of algorithmic trading.
 
-### 2️⃣ Compute SMA Crossover Signals
-```python
-df = sma_crossing_signals(df, short_window=20, long_window=60)
-```
-- Calculates **20-day SMA** and **60-day SMA**.
-- Generates crossover signals for entry (buy) and exit (sell) points.
+### Key Features
 
-### 3️⃣ Backtest Trading Strategy
-```python
-df = backtest_trading_strategy(df, cash_to_invest=10000, transaction_cash_ratio=0.5, transaction_cost=0.001)
-```
-- **Initial Capital**: $10,000
-- **Allocation**: 50% of cash on buy signals.
-- **Sell**: Exit all holdings on a sell signal.
-- **Transaction Cost**: 0.1% per trade.
+- **Donchian Channel Breakout Strategy**: Capture market trends by identifying breakouts above or below the Donchian Channel, a proven method for trend-following strategies.
 
-### 4️⃣ Visualize Performance
-```python
-plot_chart(df)
-```
-- **Candlestick Chart** with SMA overlays.
-- **Total Equity & Cash Balance** over time.
-- **Buy & Sell Markers** on price movements.
+- **Simple Moving Average (SMA) Crossover**: Utilize the classic SMA crossover technique to generate buy and sell signals, enhanced with backtesting to evaluate performance.
 
-## Example Results 🚀
-```
-The final equity is: 15149.23 USD
-The total return is: 51.49%
-```
-The backtest demonstrates a **+51.49% return** using historical BTC/USDT data. 📈
+- **Advanced Indicators**: Integrate sophisticated indicators like Hull Moving Average (HMA), Zero Lag Moving Average (ZLMA), and Detrended Price Oscillator (DPO) to refine trading signals.
 
-## Installation & Dependencies 🛠️
-```bash
-pip install numpy pandas scipy matplotlib mplfinance requests
-```
+- **Risk Management**: Implement stop-loss and take-profit levels based on the Average True Range (ATR) to manage risk effectively.
 
-## Future Enhancements 🚀
-- Add **Exponential Moving Averages (EMA)**.
-- Implement **Risk Management** and Stop-loss mechanisms.
-- Extend support for additional cryptocurrency exchanges.
+- **Data Visualization**: Gain insights through detailed visualizations of trading signals and strategy performance using matplotlib and mplfinance.
 
-## Contributing 🤝
-Got ideas? Found a bug? Open an **issue** or submit a **pull request**!
+### Why This Project?
 
-## License 📜
-MIT License - Free to use and modify!
+In a world where data-driven decisions are paramount, this project empowers traders with tools to navigate the complexities of financial markets. By combining traditional and modern techniques, it offers a holistic approach to trading strategy development.
+
+### Who Can Benefit?
+
+- **Traders**: Enhance your trading toolkit with proven strategies and advanced indicators.
+- **Developers**: Explore the intersection of finance and technology with hands-on coding examples.
+- **Researchers**: Dive into quantitative finance methodologies and explore potential areas for further research.
+
+### Get Started
+
+Ready to dive in? Check out the [documentation](#) for detailed instructions on setting up the project and running the strategies. Whether you're backtesting historical data or exploring new market opportunities, this project is your gateway to algorithmic trading success.
